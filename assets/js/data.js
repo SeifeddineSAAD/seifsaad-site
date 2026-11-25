@@ -7,16 +7,16 @@ window.CONTACT = {
   phone: "+216 28 05 02 01"
 };
 
+const AWS_VERIFY = "https://aws.amazon.com/verification";
 window.CERTS = [
-  { issuer: "AWS", name: "Solutions Architect – Associate", code: "SAA-C03" },
-  { issuer: "AWS", name: "AI Practitioner", code: "AIF-C01" },
-  { issuer: "AWS", name: "Cloud Practitioner", code: "CLF-C02" },
-  { issuer: "AWS", name: "AI Business Strategist", code: "AWS" },
-  { issuer: "HashiCorp", name: "Terraform Associate", code: "Terraform" },
-  { issuer: "PMI", name: "Project Management Professional", code: "PMP®" },
-  { issuer: "PMI", name: "Cognitive Project Management for AI", code: "PMI-CPMAI" },
-  { issuer: "PeopleCert", name: "ITIL® 4", code: "ITSM" },
-  { issuer: "Scrum Alliance", name: "Certified ScrumMaster®", code: "CSM" }
+  { issuer: "AWS", name: "Solutions Architect – Associate", code: "SAA-C03", img: "aws-saa.jpg", verify: AWS_VERIFY },
+  { issuer: "AWS", name: "AI Practitioner", code: "AIF-C01", img: "aws-aif.jpg", verify: AWS_VERIFY },
+  { issuer: "AWS", name: "Cloud Practitioner", code: "CLF-C02", img: "aws-clf.jpg", verify: AWS_VERIFY },
+  { issuer: "HashiCorp", name: "Terraform Associate", code: "HCTA0-003", img: "terraform.jpg" },
+  { issuer: "PMI", name: "Project Management Professional", code: "PMP®", img: "pmp.jpg", verify: "https://www.pmi.org/certifications/certification-resources/registry" },
+  { issuer: "PeopleCert · Axelos", name: "ITIL® 4 Foundation", code: "IT Service Management", img: "itil4.jpg", verify: "https://www.peoplecert.org/for-corporations/certificate-verification-service" },
+  { issuer: "Scrum.org", name: "Professional Scrum Master™ I", code: "PSM I", img: "psm1.jpg", verify: "https://www.scrum.org/certificates/1015265" },
+  { issuer: "AWS", name: "AI Business Strategist", code: "AWS", soon: true }
 ];
 
 /* Catalogue Gumroad (boutique saadseif.gumroad.com) */
@@ -145,7 +145,7 @@ window.TERM = {
     [["", "  + role           = "], ["s", "\"Directeur Informatique\""]],
     [["", "  + cloud          = "], ["s", "\"AWS · Terraform · Serverless\""]],
     [["", "  + experience     = "], ["k", "18"]],
-    [["", "  + certifications = "], ["k", "9"]],
+    [["", "  + certifications = "], ["k", "7"]],
     [["", "  + enseigne       = ["], ["s", "\"IA\", \"AWS\", \"Terraform\", \"PMP\""], ["", "]"]],
     [["", "  + langues        = ["], ["s", "\"ar\", \"fr\", \"en\""], ["", "]"]],
     [["ok", "Plan: 1 expert à ajouter, 0 à modifier, 0 à détruire."]],
@@ -157,7 +157,7 @@ window.TERM = {
     [["", "  + role           = "], ["s", "\"IT Director\""]],
     [["", "  + cloud          = "], ["s", "\"AWS · Terraform · Serverless\""]],
     [["", "  + experience     = "], ["k", "18"]],
-    [["", "  + certifications = "], ["k", "9"]],
+    [["", "  + certifications = "], ["k", "7"]],
     [["", "  + teaches        = ["], ["s", "\"AI\", \"AWS\", \"Terraform\", \"PMP\""], ["", "]"]],
     [["", "  + languages      = ["], ["s", "\"ar\", \"fr\", \"en\""], ["", "]"]],
     [["ok", "Plan: 1 expert to add, 0 to change, 0 to destroy."]],
@@ -197,7 +197,8 @@ window.EN = {
   "t.i3": "Infrastructure as Code end to end: modules, state, workflows and best practice.",
   "t.i4t": "Project management & Agile", "t.i4": "Predictive and agile methods applied to IT and transformation projects.",
   "t.meta1": "On site or remote", "t.meta2": "Français · English · العربية", "t.meta3": "Tailored in-house sessions",
-  "c.title": "Nine certifications, <em>one standard</em>.",
+  "c.title": "Seven certifications, <em>one standard</em>.",
+  "c.view": "View certificate", "c.verify": "Verify", "c.soon": "In progress", "c.soonTxt": "Exam in preparation", "c.close": "Close",
   "m.1k": "Today", "m.1t": "IT Director", "m.1d": "IT strategy, information systems and modernisation projects for a regional public transport company.",
   "m.2k": "In production", "m.2t": "AWS infrastructure with Terraform", "m.2d": "Multi-tier platform (VPC, ALB, Auto Scaling, RDS Multi-AZ) and a serverless AI document-management system.",
   "m.3k": "18+ years", "m.3t": "Cloud, DevOps & IT programmes", "m.3d": "Architecture, automation and programme leadership, from design to operations.",

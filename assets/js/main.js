@@ -220,9 +220,36 @@
   function renderHome() {
     const certs = $("#certs");
     if (certs) {
-      certs.innerHTML = CERTS.map((c, i) => `<div class="cert" data-reveal style="--d:${(i % 3) * 70}ms">
+      const L = (k, fr) => t(k) || fr;
+      certs.innerHTML = CERTS.map((c, i) => c.soon
+        ? `<div class="cert soon" data-reveal style="--d:${(i % 4) * 70}ms">
+        <div class="c-thumb c-soon"><span class="mono">${L("c.soon", "En cours")}</span></div>
         <div class="issuer mono"><span>${c.issuer}</span><span>${String(i + 1).padStart(2, "0")}</span></div>
-        <div><h4>${c.name}</h4><span class="code">${c.code}</span></div></div>`).join("");
+        <div><h4>${c.name}</h4><span class="code">${L("c.soonTxt", "Examen en préparation")}</span></div></div>`
+        : `<div class="cert" data-reveal style="--d:${(i % 4) * 70}ms">
+        <button class="c-thumb" type="button" data-cert="${i}" aria-label="${L("c.view", "Voir le certificat")} : ${c.name}">
+          <img src="assets/img/certs/${c.img}" alt="${c.issuer} ${c.name}" loading="lazy" decoding="async"></button>
+        <div class="issuer mono"><span>${c.issuer}</span><span>${String(i + 1).padStart(2, "0")}</span></div>
+        <div><h4>${c.name}</h4><span class="code">${c.code}</span>
+          <div class="c-actions mono"><button type="button" data-cert="${i}">${L("c.view", "Voir le certificat")}</button>${c.verify ? `<a href="${c.verify}" target="_blank" rel="noopener">${L("c.verify", "Vérifier")} ↗</a>` : ""}</div></div></div>`).join("");
+      const dlg = $("#certViewer");
+      if (dlg && !dlg.dataset.ready) {
+        dlg.dataset.ready = 1;
+        document.addEventListener("click", e => {
+          const b = e.target.closest("[data-cert]");
+          if (!b) return;
+          const c = CERTS[+b.dataset.cert];
+          dlg.querySelector("img").src = "assets/img/certs/" + c.img;
+          dlg.querySelector("img").alt = c.issuer + " " + c.name;
+          dlg.querySelector(".cv-title").textContent = c.issuer + " · " + c.name;
+          const v = dlg.querySelector(".cv-verify");
+          v.hidden = !c.verify; if (c.verify) v.href = c.verify;
+          dlg.querySelector(".cv-close").setAttribute("aria-label", L("c.close", "Fermer"));
+          dlg.showModal();
+        });
+        dlg.querySelector(".cv-close").addEventListener("click", () => dlg.close());
+        dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+      }
     }
     const list = $("#bandList");
     if (list) {
