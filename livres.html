@@ -3,15 +3,518 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Livres & guides de révision — AWS, Terraform · Seifeddine Saad</title>
-  <meta name="description" content="Fiches de révision, pièges d'examen et quiz originaux pour AWS Cloud Practitioner, AWS AI Practitioner et Terraform Associate. Français + anglais, à partir de 7 €.">
+  <title>Fiches de révision AWS CLF-C02, AIF-C01 et Terraform 004 (FR + EN) · Exam Eve</title>
+  <meta name="description" content="Fiches de révision, pièges d’examen et quiz originaux pour AWS Cloud Practitioner (CLF-C02), AWS AI Practitioner (AIF-C01) et Terraform Associate (004). PDF en français + anglais, dès 7 €.">
   <meta property="og:title" content="Guides de révision AWS & Terraform — FR + EN">
+  <meta property="og:type" content="website">
   <meta property="og:description" content="107 pièges expliqués, 120 questions originales, 3 certifications. À partir de 7 €.">
+  <link rel="canonical" href="https://www.seifsaad.com/livres.html">
+  <meta property="og:url" content="https://www.seifsaad.com/livres.html">
+  <meta property="og:site_name" content="Seifeddine Saad">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:image" content="https://www.seifsaad.com/assets/img/og-livres.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F3F0E8">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@400;500&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json" id="seo-jsonld">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CollectionPage",
+   "@id": "https://www.seifsaad.com/livres.html",
+   "url": "https://www.seifsaad.com/livres.html",
+   "name": "Guides de révision AWS & Terraform — Exam Eve",
+   "inLanguage": [
+    "fr",
+    "en"
+   ],
+   "author": {
+    "@type": "Person",
+    "@id": "https://www.seifsaad.com/#seifeddine",
+    "name": "Seifeddine Saad",
+    "url": "https://www.seifsaad.com/"
+   }
+  },
+  {
+   "@type": "ItemList",
+   "name": "Catalogue Exam Eve",
+   "numberOfItems": 14,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Product",
+      "name": "Pack Intégral — CLF-C02 + AIF-C01 + Terraform 004",
+      "description": "Trois certifications préparées d’un coup, au meilleur prix du catalogue. 9 documents · 3 certifications · 107 pièges · 120 questions · ≈ 50 pages par langue",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/pack-integral",
+       "price": "45.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Product",
+      "name": "Pack Cloud & IA — AWS CLF-C02 + AIF-C01",
+      "description": "Les deux certifications AWS fondamentales, cloud et IA, réunies. 6 documents · CLF-C02 + AIF-C01 · 71 pièges · 80 questions · Chaque document en FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/pack-cloud-ia",
+       "price": "32.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Product",
+      "name": "Pack complet AWS Cloud Practitioner (CLF-C02)",
+      "description": "La préparation complète d’une certification : comprendre, éviter les pièges, s’entraîner. Fiche + Pièges + Quiz · 35 pièges et 40 questions · Chaque document en FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/clf-pack",
+       "price": "19.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Product",
+      "name": "Pack complet AWS AI Practitioner (AIF-C01)",
+      "description": "La préparation complète d’une certification : comprendre, éviter les pièges, s’entraîner. Fiche + Pièges + Quiz · 36 pièges et 40 questions · Chaque document en FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/aif-pack",
+       "price": "19.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Product",
+      "name": "Pack complet Terraform Associate (004)",
+      "description": "La préparation complète d’une certification : comprendre, éviter les pièges, s’entraîner. Fiche + Pièges + Quiz · 36 pièges et 40 questions · Chaque document en FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/terraform-pack",
+       "price": "19.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Product",
+      "name": "Fiche de révision AWS Cloud Practitioner (CLF-C02)",
+      "description": "Pour réactiver tout le programme en un coup d’œil, la veille de l’examen. Tout le programme sur 2 pages A4 · Conçue pour une relecture rapide · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/clf-fiche",
+       "price": "7.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "item": {
+      "@type": "Product",
+      "name": "Pièges d’examen AWS Cloud Practitioner (CLF-C02)",
+      "description": "Pour ne plus perdre de points sur les distinctions subtiles entre services. 35 pièges : l’affirmation trompeuse + l’explication · 9 tableaux comparatifs · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/clf-pieges",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "item": {
+      "@type": "Product",
+      "name": "Quiz d’entraînement AWS Cloud Practitioner (CLF-C02)",
+      "description": "Pour mesurer votre niveau et savoir exactement quoi revoir avant le jour J. 40 questions originales au format examen · Réponses expliquées une par une · ≈ 0,23 € la question · FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/clf-quiz",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "item": {
+      "@type": "Product",
+      "name": "Fiche de révision AWS AI Practitioner (AIF-C01)",
+      "description": "Pour réactiver tout le programme en un coup d’œil, la veille de l’examen. Tout le programme sur 2 pages A4 · Conçue pour une relecture rapide · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/aif-fiche",
+       "price": "7.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "item": {
+      "@type": "Product",
+      "name": "Pièges d’examen AWS AI Practitioner (AIF-C01)",
+      "description": "Pour ne plus perdre de points sur les distinctions subtiles entre services. 36 pièges : l’affirmation trompeuse + l’explication · Tableaux comparatifs entre notions proches · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/aif-pieges",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "item": {
+      "@type": "Product",
+      "name": "Quiz d’entraînement AWS AI Practitioner (AIF-C01)",
+      "description": "Pour mesurer votre niveau et savoir exactement quoi revoir avant le jour J. 40 questions originales au format examen · Réponses expliquées une par une · ≈ 0,23 € la question · FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/aif-quiz",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "item": {
+      "@type": "Product",
+      "name": "Fiche de révision Terraform Associate (004)",
+      "description": "Pour réactiver tout le programme en un coup d’œil, la veille de l’examen. Tout le programme sur 2 pages A4 · Conçue pour une relecture rapide · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/terraform-fiche",
+       "price": "7.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
+     "item": {
+      "@type": "Product",
+      "name": "Pièges d’examen Terraform Associate (004)",
+      "description": "Pour ne plus perdre de points sur les distinctions subtiles entre services. 36 pièges : l’affirmation trompeuse + l’explication · Tableaux comparatifs entre notions proches · 2 PDF : français + anglais",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/terraform-pieges",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 14,
+     "item": {
+      "@type": "Product",
+      "name": "Quiz d’entraînement Terraform Associate (004)",
+      "description": "Pour mesurer votre niveau et savoir exactement quoi revoir avant le jour J. 40 questions originales au format examen · Réponses expliquées une par une · ≈ 0,23 € la question · FR + EN",
+      "image": "https://www.seifsaad.com/assets/img/og-livres.jpg",
+      "brand": {
+       "@type": "Brand",
+       "name": "Exam Eve"
+      },
+      "category": "Guide de révision de certification (PDF)",
+      "offers": {
+       "@type": "Offer",
+       "url": "https://saadseif.gumroad.com/l/terraform-quiz",
+       "price": "9.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "seller": {
+        "@type": "Person",
+        "@id": "https://www.seifsaad.com/#seifeddine",
+        "name": "Seifeddine Saad",
+        "url": "https://www.seifsaad.com/"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Dans quel format sont les documents ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Des PDF au format A4, téléchargeables immédiatement après le paiement. Ils se lisent sur ordinateur, tablette ou téléphone, et s’impriment sans problème."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Le français et l’anglais sont-ils vraiment inclus tous les deux ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Chaque achat contient la version française et la version anglaise de chaque document, sans supplément. Pratique si vous passez l’examen en anglais mais révisez en français."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "S’agit-il de vraies questions d’examen ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Non. Tout le contenu est original, rédigé à partir des guides officiels (CLF-C02 v1.3, AIF-C01 v1.2, objectifs Terraform Associate 004 / Terraform 1.12). L’objectif est de maîtriser les concepts, pas de mémoriser des réponses."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ces documents suffisent-ils pour réussir ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ils sont conçus pour la dernière ligne droite et complètent une préparation plus large (cours, pratique, documentation). Leur force : vous faire gagner du temps et éviter les erreurs classiques."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je ne prépare qu’une seule certification, que choisir ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le pack de la certification (19 €) : les trois documents à 19 € au lieu de 25 €. Si vous visez les deux examens AWS, le Pack Cloud & IA est plus avantageux."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment se passent le paiement et la livraison ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le paiement est sécurisé par Gumroad. Vous recevez aussitôt un e-mail avec le lien de téléchargement, que vous pouvez réutiliser plus tard."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Accueil",
+     "item": "https://www.seifsaad.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Livres",
+     "item": "https://www.seifsaad.com/livres.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
 </head>
 <body data-page="shop">
   <div class="veil" aria-hidden="true"></div>
