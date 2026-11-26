@@ -618,6 +618,46 @@ footer { padding: 30px 0 40px; border-top: 1px solid var(--line); color: var(--i
 .cursor.big { width: 56px; height: 56px; margin: -28px 0 0 -28px; background: var(--lime); mix-blend-mode: multiply; }
 @media (hover: none) { .cursor { display: none; } }
 
+/* ---------- Parcours page ---------- */
+.path-hero { padding-bottom: clamp(60px, 8vw, 110px); }
+.path-hero .h-display { max-width: 16ch; }
+.impact { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 24px; border-top: 1px solid var(--ink); }
+.imp { padding: 22px 0 26px; border-bottom: 1px solid var(--line); }
+.imp b { display: block; font-family: var(--f-display); font-weight: 400; font-size: clamp(34px, 3.6vw, 50px); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 8px; color: var(--petrol); }
+.imp span { color: var(--ink-2); font-size: 14.5px; display: block; max-width: 28ch; }
+.imp b span { display: inline; color: inherit; font-size: inherit; }
+.home-impact { margin-top: 50px; }
+
+.timeline { border-top: 1px solid var(--ink); }
+.tl { display: grid; grid-template-columns: 220px 1fr; gap: 30px; padding: 34px 0; border-bottom: 1px solid var(--line); }
+.tl-when { color: var(--petrol); padding-top: 8px; }
+.tl h3 { font-family: var(--f-display); font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.08; letter-spacing: -.015em; margin: 0 0 6px; }
+.tl-org { color: var(--ink-3); margin: 0 0 18px; font-size: 15px; }
+.tl ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.tl li { position: relative; padding-left: 22px; color: var(--ink-2); max-width: 78ch; }
+.tl li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 2px; background: var(--petrol); }
+.tl li b { color: var(--ink); font-weight: 600; }
+
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.sk { padding: 22px 24px; background: var(--paper-3); border: 1px solid var(--line); border-radius: var(--r); transition: border-color .3s, transform .4s var(--ease-out); }
+.sk:hover { border-color: var(--line-strong); transform: translateY(-3px); }
+.sk h4 { margin: 0 0 14px; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+.langs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line-strong); }
+.langs .mono { color: var(--ink-3); }
+.langs i { font-style: normal; font-family: var(--f-mono); font-size: 12px; color: var(--petrol); margin-left: 4px; }
+
+.gh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gh { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 26px 26px 24px; border: 1px solid var(--line); border-radius: var(--r); background: var(--paper-3); color: inherit; text-decoration: none; transition: border-color .3s, transform .4s var(--ease-out), box-shadow .4s; }
+.gh:hover { transform: translateY(-4px); border-color: var(--line-strong); box-shadow: 0 18px 40px -24px rgba(20, 19, 15, .35); }
+.gh .mono { color: var(--petrol); font-size: 12px; padding-right: 50px; word-break: break-all; }
+.gh h3 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+.gh p { margin: 0 0 6px; color: var(--ink-2); font-size: 15px; flex: 1; }
+.gh .go { position: absolute; top: 20px; right: 20px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; transition: background .3s, border-color .3s, transform .4s var(--ease-out); }
+.gh:hover .go { background: var(--lime); border-color: var(--lime); transform: rotate(-45deg); }
+.path-cta { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 30px; }
+.path-cta .h2 { max-width: 20ch; }
+.band .btn-ghost { --bg: transparent; --fg: var(--paper); border-color: rgba(243, 240, 232, .35); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .grid-books { grid-template-columns: repeat(2, 1fr); }
@@ -639,6 +679,9 @@ footer { padding: 30px 0 40px; border-top: 1px solid var(--line); color: var(--i
   .row > div { grid-column: 1; }
   .row .go { grid-row: 2; grid-column: 2; }
   .steps, .milestones { grid-template-columns: 1fr; }
+  .impact { grid-template-columns: repeat(2, 1fr); }
+  .skills, .gh-grid { grid-template-columns: 1fr; }
+  .tl { grid-template-columns: 1fr; gap: 10px; }
   .term { transform: none; }
   .portrait { max-width: 420px; }
 }
